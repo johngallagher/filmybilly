@@ -1,0 +1,25 @@
+
+<div id="container">Loading...
+
+<h1>Listing reviews</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th>Review</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reviews.each do |review| %>
+  <%= render 'show', :review => review %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Review', new_review_path %>
+
+</div>

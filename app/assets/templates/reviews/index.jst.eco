@@ -1,0 +1,5 @@
+<h1>Reviews Listing!</h1>
+
+<% for review in @reviews.models: %>
+  <p><%= review.get('name') %></p>
+<% end %>
