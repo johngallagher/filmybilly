@@ -1,3 +1,3 @@
 class FilmyBilly.Collections.Reviews extends Backbone.Collection
-  url: 'api/reviews'
+  url: 'reviews'
   model: FilmyBilly.Models.Review
