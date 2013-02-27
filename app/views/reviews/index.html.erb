@@ -1,23 +1,10 @@
-<div id="container">
-
+<div>
   <h1>Listing reviews</h1>
-
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Year</th>
-      <th>Review</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-
+  <div id="reviews">
     <% @reviews.each do |review| %>
-    <%= render 'show', :review => review %>
+      <%= render 'show', :review => review %>
     <% end %>
-  </table>
-
+  </div>
   <br />
-
   <%= link_to 'New Review', new_review_path %>
 </div>
