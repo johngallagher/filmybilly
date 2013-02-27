@@ -4,6 +4,7 @@ class FilmyBilly.Views.ReviewsIndex extends Backbone.View
     @collection.on('reset', @render, this)
 
   render: ->
+    $('#reviews').html('')
     for review in @collection.models
       @appendReview(review)
     
@@ -11,5 +12,5 @@ class FilmyBilly.Views.ReviewsIndex extends Backbone.View
 
   appendReview: (review) =>
     view = new FilmyBilly.Views.Review(model: review)
-    $('#reviews').append(view.render().el())
+    $('#reviews').append(view.render().el)
 

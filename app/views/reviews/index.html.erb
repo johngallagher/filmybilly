@@ -1,10 +1,10 @@
 <div>
   <h1>Listing reviews</h1>
-  <div id="reviews">
+  <ul id="reviews">
     <% @reviews.each do |review| %>
       <%= render 'show', :review => review %>
     <% end %>
-  </div>
+  </ul>
   <br />
   <%= link_to 'New Review', new_review_path %>
 </div>
