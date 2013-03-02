@@ -1,1 +1,20 @@
-<li><%= @review.get('name') %></li>
+<li>
+<p>
+  <b>Name:</b>
+  <%= @review.get('name') %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @review.get('year') %>
+</p>
+
+<p>
+  <b>Review:</b>
+  <%= @review.get('review') %>
+</p>
+
+<a href="<%= @review.get('edit_review_path') %>">Edit</a> |
+<a href="<%= @review.get('reviews_path') %>">Back</a>
+
+</li>
