@@ -25,8 +25,8 @@ class ErbSnippetConverter
 
   def convert_helper_tag_attribute(helper_tag, attribute)
     @backbonified.gsub!(
-      /(?<padding>[^a-z_])(?<helper_tag>#{helper_tag})\((?<variable>#{attribute})\)/,
-      '\k<padding>"\<\%\= @\k<variable>.get(\'\k<helper_tag>\') \%\>".html_safe'
+      /(?<padding>[^a-z_])(?<helper_tag>#{helper_tag})\(#{attribute}\)/,
+      '\k<padding>"\<\%\= @' + attribute.to_s + '.get(\'\k<helper_tag>\') \%\>".html_safe'
       )
     @backbonified.gsub!(
       /(?<padding>[^a-z_])(?<helper_tag>#{helper_tag}) /,
