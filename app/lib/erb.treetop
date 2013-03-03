@@ -1,0 +1,27 @@
+require 'node_extensions'
+
+grammar Erb
+  rule document
+    erb_tag
+  end
+
+  rule erb_tag
+    (text open_tag inner_text close_tag text)*
+  end
+
+  rule open_tag
+    '<%' '='* <OpenTag>
+  end
+
+  rule close_tag
+    '%>' <CloseTag>
+  end
+
+  rule inner_text
+    (!'%>' .)* <InnerText>
+  end
+
+  rule text
+    (!'<%' .)* <Text>
+  end
+end
