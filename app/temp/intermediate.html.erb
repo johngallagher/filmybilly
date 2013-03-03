@@ -1,6 +1,5 @@
 <li>
 <p>
-  <b>Name:</b>
   <%= "\<\%\= @review.get('name') \%\>".html_safe %>
 </p>
 
@@ -16,5 +15,5 @@
 
 
 <%= link_to 'Edit', "\<\%\= @review.get('edit_review_path') \%\>".html_safe %> |
-<%= link_to 'Back', "\<\%\= @review.get('reviews_path') \%\>".html_safe%>
+<%= link_to 'Delete', "\<\%\= @review.get('review_path') \%\>".html_safe, :method => :delete %> |
 </li>

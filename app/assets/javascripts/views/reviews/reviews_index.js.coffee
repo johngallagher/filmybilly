@@ -4,7 +4,7 @@ class FilmyBilly.Views.ReviewsIndex extends Backbone.View
     @collection.on('reset', @render, this)
 
   render: ->
-    $('#reviews').html('')
+    $('#reviews').html('<p>This is from Backbone!</p>')
     for review in @collection.models
       @appendReview(review)
     

@@ -10,6 +10,3 @@ class FilmyBilly.Routers.Reviews extends Backbone.Router
   index: ->
     view = new FilmyBilly.Views.ReviewsIndex(collection: @collection)
     $('#reviews').html(view.render().el)
-
-  show: (id) ->
-    alert "ID of #{id}"

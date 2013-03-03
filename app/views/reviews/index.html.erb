@@ -1,6 +1,8 @@
 <div>
-  <h1>Listing reviews</h1>
+  <h1>Filmy Billy!</h1>
+  <p>Follow <a href="http://twitter.com/filmybilly">Filmy Billy</a> on Twitter.</p>
   <ul id="reviews">
+    <p>This comes from Rails!</p>
     <% @reviews.each do |review| %>
       <%= render 'show', :review => review %>
     <% end %>
