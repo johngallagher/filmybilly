@@ -1,0 +1,20 @@
+<li>
+<p>
+  <b>Name:</b>
+  <%= @review.name %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @review.year %>
+</p>
+
+<p>
+  <b>Review:</b>
+  <%= @review.review %>
+</p>
+
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>
+</li>
