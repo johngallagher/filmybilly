@@ -14,7 +14,7 @@
   <%= @review.get('review') %>
 </p>
 
+
 <a href="<%= @review.get('edit_review_path') %>">Edit</a> |
 <a href="<%= @review.get('reviews_path') %>">Back</a>
-
 </li>

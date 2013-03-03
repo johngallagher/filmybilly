@@ -2,8 +2,7 @@
   <h1>Listing reviews</h1>
   <ul id="reviews">
     <% @reviews.each do |review| %>
-      <% @review = review %>
-      <%= render 'show' %>
+      <%= render 'show', :review => review %>
     <% end %>
   </ul>
   <br />
